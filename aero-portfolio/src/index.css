@@ -47,8 +47,8 @@ h1 {
 }
 
 .app-wrapper {
-  width: 600px;
-  height: 10000px;
+  width: 400px;
+  height: 900px;
   display: flex;
   justify-content: center;
 }
@@ -112,18 +112,15 @@ h1 {
   user-select: none;
 }
 
-.content-container-left, .content-container-right {
+.content-container {
   position: relative;
   display: flex;
   flex-direction: column;
+  transition: height 0.5s ease;
 }
 
-.content-container-left {
-  align-items: flex-start;
-}
-
-.content-container-right {
-  align-items: flex-end;
+.content-wrapper {
+  width: 100vw;
 }
 
 .skeuo-content {
@@ -131,7 +128,8 @@ h1 {
   padding: 20px;
   margin: 50px 0px 0px 0px;
   width: 400px;
-  background: linear-gradient(180deg,rgb(123, 134, 163, 0.75) 0%, rgb(220, 223, 231, 0.75) 25%, rgba(158, 171, 204, 0.75) 60%, rgb(220, 223, 231, 0.75) 75%, rgb(198, 208, 233, 0.75) 100%);
+  backdrop-filter: blur(4px);
+  filter: url(#lensFilter) saturate(120%) brightness(1.1);
   border-radius: 15px;
   z-index: 15;
 }
@@ -172,16 +170,57 @@ h1 {
   text-shadow: 0px 0px 5px #b6fb70;
 }
 
+.skeuo-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 50px 0px 0px 0px;
+  width: 400px;
+  background: linear-gradient(180deg,rgba(222, 232, 254, 1) 0%, rgb(200, 208, 232) 100%);
+  border-radius: 15px;
+  z-index: 15;
+}
+
+.skeuo-menu > * {
+  position: relative;
+  margin: 10px;
+  z-index: 20;
+}
+
+.skeuo-menu h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.skeuo-menu h3 {
+  margin-top: -10px;
+  margin-bottom: 0px;
+  font-size: 2em;
+}
+
+.skeuo-menu p {
+  margin-top: 0px;
+}
+
+.skeuo-menu code {
+  background: rgb(47, 51, 62);
+  border-radius: 7px;
+  padding: 2px 7px;
+  color: #b6fb70;
+  text-shadow: 0px 0px 5px #b6fb70;
+}
+
 .skeuo-button {
   position:relative;
   padding:0;
   width:fit-content;
   height:80px;
-  border:4px solid #888888;
+  border:4px solid #a4adc5;
   outline:none;
-  background-color:#f4f5f6;
+  background-color:#dce6fc;
   border-radius: 40px;
-  box-shadow:  -6px -20px 35px #ffffff77, -6px -10px 15px #ffffff7a, -20px 0px 30px #ffffff9d, 6px 20px 25px rgba(0,0,0,0.2);
+  box-shadow:  -6px -20px 35px #d0dded43, -6px -10px 15px #ffffff33, -20px 0px 30px #cad5e24a, 6px 20px 25px rgba(0,0,0,0.2);
   transition: .13s ease-in-out;
   cursor:pointer;
   &:active{
@@ -203,11 +242,12 @@ h1 {
     user-select: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr;
-    box-shadow:inset 0px -8px 0px #dddddd, 0px -8px 0px #f4f5f6;
+    box-shadow:inset 0px -8px 0px #c7d0e3, 0px -8px 0px #e8efff;
     border-radius: 40px;
     transition: .13s ease-in-out; 
     z-index:1;
   }
+
   .skeuo-button-text{
       position:relative;
       transform:translate3d(0px, -4px, 0px);
@@ -217,7 +257,7 @@ h1 {
       grid-row:2;
       text-align:center;
       font-size: 32px;
-      background-color: #888888;
+      background-color: #8e9cac;
       color: transparent;
       user-select: none;
       text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
@@ -227,12 +267,29 @@ h1 {
       transition: .13s ease-in-out; 
   }
 
+  .skeuo-button-svg {
+    position: absolute;
+    top: 17px;
+    left: 22px;
+  }
 
+  .skeuo-button-svg path {
+    width: auto;
+    height: auto;
+    fill: #8e9cac;
+    filter: drop-shadow(2px 2px 3px rgba(255,255,255,0.5));
+  }
 
 .spacer {
   position: relative;
   width: 100vh;
   height: 120px;
+}
+
+.spacer-footer {
+  position: relative;
+  width: 100vh;
+  height: 240px;
 }
 
 .resume-container {
@@ -249,4 +306,27 @@ h1 {
 
 .resume-secondary {
   margin: 0px 10px;
+}
+
+.absolute-viewer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  transition: top 0.5s ease;
+}
+
+.absolute-viewer-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
