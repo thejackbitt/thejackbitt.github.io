@@ -35,3 +35,9 @@ export default function Model({ modelName, position = [0, 0, 0] }) {
 
 useGLTF.preload('/src/components/models/WindowsXP.glb')
 useGLTF.preload('/src/components/models/Keyboard.glb')
+useGLTF.preload('/src/components/models/Tux.glb')
+useGLTF.preload('/src/components/models/Pen.glb')
+useGLTF.preload('/src/components/models/CD.glb')
+useGLTF.preload('/src/components/models/Headphones.glb')
+useGLTF.preload('/src/components/models/Dolphin.glb')
+useGLTF.preload('/src/components/models/Gamecube.glb')

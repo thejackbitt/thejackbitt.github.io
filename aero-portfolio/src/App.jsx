@@ -43,7 +43,7 @@ function App() {
 
   return (
     <>
-      <CamContext.Provider value={{ camState, setCamState }}>
+<CamContext.Provider value={{ camState, setCamState }}>
         <Header />
         <div className="app-wrapper">
           <div className="content-wrapper">
@@ -191,7 +191,7 @@ function App() {
                       <ul>
                         <li>
                           <div className="resume-container">
-                            <h3 className="resume-header"><a href="https://gonkville.com">gonkville.com</a></h3>
+                            <h3 className="resume-header"><a href="https://gonkville.com" target="_blank">gonkville.com</a></h3>
                             <code className="resume-header-secondary">JS, SvelteKit</code>
                           </div>
                           <div className="resume-container">
