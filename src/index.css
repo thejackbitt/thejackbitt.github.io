@@ -1,4 +1,6 @@
+
 :root {
+  --bkg-color: linear-gradient(180deg,rgb(154, 175, 214) 0%, rgb(165, 177, 198) 100%);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -14,7 +16,7 @@
 }
 
 html {
-  background: linear-gradient(180deg,rgb(185, 201, 229) 0%, rgba(211, 225, 250, 1) 100%);
+  background: var(--bkg-color);
 }
 
 a {
@@ -32,8 +34,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   height: fit-content;
-  background: #D3E1FA;
-  background: linear-gradient(180deg,rgb(185, 201, 229) 0%, rgba(211, 225, 250, 1) 100%);
+  background: var(--bkg-color);
 }
 
 h1 {
@@ -44,7 +45,7 @@ h1 {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: var(--bkg-color);
   }
   a:hover {
     color: #747bff;
@@ -263,7 +264,7 @@ h1 {
       grid-row:2;
       text-align:center;
       font-size: 32px;
-      background-color: #8e9cac;
+      background-color: #6e7e92;
       color: transparent;
       user-select: none;
       text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
