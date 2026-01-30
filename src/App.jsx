@@ -61,9 +61,11 @@ function App() {
                     <h3 className="skeuo-text">
                       menu v1.0
                     </h3>
-                    <Button click={() => changePage(1)}>About</Button>
-                    <Button click={() => changePage(2)}>Work History</Button>
-                    <Button click={() => changePage(3)}>Personal Projects</Button>
+                    <div className="button-container">
+                      <Button click={() => changePage(1)}>About</Button>
+                      <Button click={() => changePage(2)}>Work History</Button>
+                      <Button click={() => changePage(3)}>Personal Projects</Button>
+                    </div>
                   </Menu>
                   <div className="spacer-footer" />
                   <Page changePage={changePage} pageState={pageState} coordState={coordState}>

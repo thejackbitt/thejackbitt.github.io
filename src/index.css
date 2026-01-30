@@ -207,7 +207,7 @@ h1 {
 }
 
 .skeuo-menu p {
-  margin-top: 0px;
+  margin-top: -5px;
 }
 
 .skeuo-menu code {
@@ -244,7 +244,7 @@ h1 {
     position:relative;
     display:grid;
     padding:20px;
-    width:fit-content;
+    min-width: 250px;
     height:30px;
     user-select: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -346,4 +346,14 @@ h1 {
   .skeuo-menu {
     width: 80vw;
   }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container .skeuo-button {
+    margin: 10px 0px;
 }
